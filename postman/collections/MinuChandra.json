@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "aa272ff5-b3d4-4bda-aab7-8d822123362f",
+		"name": "MinuChandra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "27898693-aa272ff5-b3d4-4bda-aab7-8d822123362f"
+	},
+	"item": [
+		{
+			"name": "AddNewPage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6a9c49fe-a834-4ad0-96d0-f49741e869f1",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"michael.lawson@reqres.in\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.page).to.eql(2);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.page).to.eql(2);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "ccd7ec4c-9353-423f-b7fc-b07d2e9387a4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
