@@ -14,6 +14,6 @@ jobs:
         run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
       - name: Run API tests
         run: |
-          postman collection run "27898693-aa272ff5-b3d4-4bda-aab7-8d822123362f"
+          postman collection run "27898693-aa272ff5-b3d4-4bda-aab7-8d822123362f" -e "27898693-60e6ad67-1d4f-4a1e-9065-ed00d1bf91da"
           # Lint your API using Postman CLI
           postman api lint 0fdd3b3d-11e3-47d3-8dd9-9956f6f22c49
